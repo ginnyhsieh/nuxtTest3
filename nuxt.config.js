@@ -26,6 +26,18 @@ export default {
     '~/assets/scss/main.scss'
   ],
 
+  //頁面讀取進度條
+  loading: { 
+    color: '#40659b',height:"2px",duration:5000 
+  },
+
+
+  //頁面過渡效果
+  transition: {
+    name: 'layout',
+    mode: 'out-in'
+  },  
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/datepicker.js', mode: 'client' },
