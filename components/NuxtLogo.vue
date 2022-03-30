@@ -4,6 +4,17 @@
   </svg>
 </template>
 
+<script>
+
+export default {
+  name: 'NuxtLogo',
+  // mounted() {
+  //   this.$gsap.to("svg", {rotation: 27, x: 100, duration: 1});
+  // }
+
+}
+</script>
+
 <style>
 .nuxt-logo {
   height: 180px;

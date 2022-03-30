@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,wEAAI,CDMZ,ACCI,EDDF,ACCG,MAAM,AAAA,CACH,OAAO,CAAE,EAAE,CACX,OAAO,CAAE,KAAK,CACd,KAAK,CAAE,IAAI,CACd,ADVL,AAAA,IAAI,AAAA,CACA,gBAAgB,CCAV,OAAO,CDCb,WAAW,CAAE,0BAA0B,CAC1C",
+    "sources": [
+        "../assets/scss/demo.scss",
+        "../assets/scss/_variables.scss"
+    ],
+    "names": [],
+    "file": "demo.min.css"
+}

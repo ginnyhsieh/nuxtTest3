@@ -1,32 +1,19 @@
 <template>
   <div>
     <Logo />
-    <div v-for="n in 5" :key="n">
-      <nuxt-link :to="{name: 'demo-test', params: {test: n}}">頁面{{n}}</nuxt-link>  
-    </div>
-    <client-only>
-      <datepicker></datepicker>  
-    </client-only>
-    
-    
     <p>{{info}}</p>
     <h1>
       {{title}}
     </h1>
     <h2>
-      {{h2}}
+      第{{this.$route.params.test}}頁
     </h2>
-    <h2>
-      {{demoH2}}
-    </h2>
-    <Tutorial :message="title" @test="getData"/>
-    <nuxt-link to="/">回首頁</nuxt-link>
+    <nuxt-link to="/demo/tpl">回tpl</nuxt-link>
   </div>
 </template>
 
 <script>
 import Logo from '~/components/NuxtLogo.vue'
-import Tutorial from '~/components/Tutorial.vue'
 
 export default {
   data () {
@@ -65,11 +52,10 @@ export default {
   },
   components: {
     Logo,
-    Tutorial
   }
 }
 </script>
 
 <style lang="scss" >
-// @import '~/assets/scss/demo.scss';
+
 </style>
