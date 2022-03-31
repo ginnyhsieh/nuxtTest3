@@ -19,7 +19,7 @@
     <h2>
       {{demoH2}}
     </h2>
-    <Tutorial :message="title" @test="getData"/>
+    <Tutorial :message="get_data" @test="getInfo"/>
     <nuxt-link to="/">回首頁</nuxt-link>
   </div>
 </template>
@@ -27,6 +27,7 @@
 <script>
 import Logo from '~/components/NuxtLogo.vue'
 import Tutorial from '~/components/Tutorial.vue'
+import { mapGetters } from 'vuex'
 
 export default {
   data () {
@@ -35,6 +36,12 @@ export default {
       h2: "這是 h2",
       info: ""
     }
+  },
+  // async asyncData({store}) {
+  //   await store.dispatch('getData');
+  // },
+  async fetch({store}) {
+    await store.dispatch('getData');
   },
   head() {
     return {
@@ -53,13 +60,14 @@ export default {
   computed: {
     demoH2(){
       return this.h2 + "(computed)"
-    }
+    },
+    ...mapGetters(['get_data'])
   },
   methods: {
     demoFn(){
       console.log("demoFn")
     },
-    getData(info) {
+    getInfo(info) {
       this.info = info;
     }
   },

@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>{{message}}</p>
-    <p @click="sendData">{{get_data}}</p>
+    <p @click="sendData">按我</p>
   </div>
   
 </template>
@@ -19,9 +19,6 @@ export default {
     };
   },
   methods: {
-    getData() {
-      this.$store.dispatch('getData');
-    },
     sendData() {
       this.$emit('test', this.info);
     }
@@ -29,9 +26,5 @@ export default {
   computed: {
     ...mapGetters(['get_data'])
   },
-  created() {
-    this.getData();
-  }
-
 }
 </script>

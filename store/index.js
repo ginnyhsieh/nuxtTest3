@@ -1,13 +1,13 @@
-import axios from 'axios';
-
 export const state = () => ({
     data: {}
 })
 
 export const actions = {
-    getData(context) {
+    async getData(context) {
         const api = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-CEC04B14-F756-4F42-85ED-28F534E5F76E&format=JSON';
-        this.$axios.get(api).then(response => context.commit('INFO', response.data.records));
+        // this.$axios.get(api).then(response => context.commit('INFO', response.data.records));
+        let response = await this.$axios(api);
+        context.commit('INFO', response.data.records);
     }
 }
 

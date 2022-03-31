@@ -62,5 +62,10 @@ export default {
       extractCSS: true,
       imgUrl: { limit: 1000 },
     }
-  }
+  },
+
+  //伺服器
+  serverMiddleware: [
+    { path: '/api', handler: '~/server/api.js' },
+  ],
 }
