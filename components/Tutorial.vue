@@ -8,7 +8,6 @@
 
 <script>
 
-import { mapGetters } from 'vuex'
 
 export default {
   name: 'NuxtTutorial',
@@ -22,9 +21,6 @@ export default {
     sendData() {
       this.$emit('test', this.info);
     }
-  },
-  computed: {
-    ...mapGetters(['get_data'])
   },
 }
 </script>
