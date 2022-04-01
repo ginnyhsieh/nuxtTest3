@@ -17,7 +17,7 @@ export default {
     ],
     script: [
       { src: 'https://code.jquery.com/jquery-2.2.4.min.js' },
-      { src: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js" } 
+      { src: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js" },
     ]
   },
 
@@ -53,7 +53,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    ['nuxt-gmaps', {
+      key: 'AIzaSyByTXELYlAawAa5GZNziXeEJyq7INQPKK0',
+      libraries: ['drawing']
+      //you can use libraries: ['places']
+    }]
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
